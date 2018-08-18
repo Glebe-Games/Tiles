@@ -25,7 +25,8 @@ class BaseTile extends React.Component {
 
   componentDidMount = () => {
     let pos = 25;
-    const id = setInterval(async () => {
+    let speed = 1;
+    const id = setInterval(() => {
       if (pos === 450) {
         clearInterval(id);
       } else {
@@ -33,8 +34,9 @@ class BaseTile extends React.Component {
         this.setState({
           margin: pos,
         });
+        speed -= 0.1;
       }
-    }, 1);
+    }, speed);
   }
 
   render = () => {
