@@ -13,7 +13,7 @@ module.exports = {
         "consistent-return": 0,
         "max-len": 0,
         "react/sort-comp": false,
-        "linebreak-style": ["error", process.env.NODE_ENV === 'prod' ? "unix" : "windows"],
+        "linebreak-style": 0,
     },
     "globals": {
         "document": true,
